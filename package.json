@@ -47,7 +47,7 @@
     "table"
   ],
   "author": "Ben Coe <ben@npmjs.com>",
-  "license": "ISC",
+  "license": "BlueOak-1.0.0",
   "dependencies": {
     "string-width": "^5.1.2",
     "string-width-cjs": "npm:string-width@^4.2.0",
