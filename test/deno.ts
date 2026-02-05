@@ -1,6 +1,13 @@
+import { spawnSync } from 'node:child_process'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import t from 'tap'
+
+const whichDeno = spawnSync('bash', ['-c', 'which deno'])
+if (whichDeno.status !== 0) {
+  t.plan(0, 'Deno not found, skipping test')
+  process.exit(0)
+}
 
 const mod = pathToFileURL( resolve(dirname(fileURLToPath(import.meta.url)), '../dist/esm/index.js'))
 
