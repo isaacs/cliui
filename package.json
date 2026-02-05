@@ -1,6 +1,6 @@
 {
   "name": "@isaacs/cliui",
-  "version": "8.0.2",
+  "version": "9.0.0",
   "description": "easily create complex multi-column command-line-interfaces",
   "type": "module",
   "main": "./dist/commonjs/index.js",
