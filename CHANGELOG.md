@@ -1,6 +1,12 @@
 # Change Log
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+## 9.0
+
+- Fork to new name and project architecture
+- Bundle all dependencies
+- Build hybrid module with `tshy`
+- Remove default export for better CommonJS/ESM compatibility
+- Set minimum node version to 18
 
 ## [8.0.1](https://github.com/yargs/cliui/compare/v8.0.0...v8.0.1) (2022-10-01)
 

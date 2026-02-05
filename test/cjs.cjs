@@ -1,8 +1,8 @@
-import {ok as assert, strictEqual} from 'assert'
-import cliui from '../../index.mjs'
+const { cliui } = require('../dist/commonjs/index.js')
+const t = require('tap')
 
-describe('ESM', () => {
-  it("wraps text at 'width' if a single column is given", () => {
+t.test('ESM', async t => {
+  t.test("wraps text at 'width' if a single column is given", async t => {
     const ui = cliui({
       width: 10
     })
@@ -10,11 +10,11 @@ describe('ESM', () => {
     ui.div('i am a string that should be wrapped')
 
     ui.toString().split('\n').forEach((row) => {
-      assert(row.length <= 10)
+      t.ok(row.length <= 10)
     })
   })
 
-  it('evenly divides text across columns if multiple columns are given', () => {
+  t.test('evenly divides text across columns if multiple columns are given', async t => {
     const ui = cliui({
       width: 40
     })
@@ -28,7 +28,7 @@ describe('ESM', () => {
     // total width of all columns is <=
     // the width cliui is initialized with.
     ui.toString().split('\n').forEach((row) => {
-      assert(row.length <= 40)
+      t.ok(row.length <= 40)
     })
 
     // it should wrap each column appropriately.
@@ -42,7 +42,7 @@ describe('ESM', () => {
       '               wrapped'
     ]
     ui.toString().split('\n').forEach((line, i) => {
-      strictEqual(line, expected[i])
+      t.equal(line, expected[i])
     })
   })
 })
