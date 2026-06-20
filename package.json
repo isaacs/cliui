@@ -111,7 +111,7 @@
     "format": "prettier --write . --log-level warn",
     "typedoc": "typedoc"
   },
-  "repository": "git+ssh://git@github.com:isaacs/cliui",
+  "repository": "git+https://github.com/isaacs/cliui.git",
   "keywords": [
     "cli",
     "command-line",
